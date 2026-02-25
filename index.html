@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic File Locker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <header class="navbar">
+        <div class="logo">
+            <i class="fas fa-lock"></i> Cosmic File Locker
+        </div>
+        <nav>
+            <ul class="nav-links">
+                {% if session['user_id'] %}
+                    <li><a href="/lock"><i class="fas fa-lock"></i> Lock</a></li>
+                    <li><a href="/list"><i class="fas fa-list"></i> Files</a></li>
+                    <li><a href="/recycle"><i class="fas fa-trash-restore"></i> Recycle</a></li>
+                    <li><a href="/logout" class="logout-btn"><i class="fas fa-power-off"></i> Logout</a></li>
+                {% else %}
+                    <li><a href="/login-page" class="auth-link"><i class="fas fa-sign-in-alt"></i> Login/Signup</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Cosmic Security</h1>
+        <p>Protect your files with interstellar flair.</p>
+        <div class="icons">
+            <a href="/lock" class="icon"><i class="fas fa-lock"></i><span>Lock</span></a>
+            <a href="/list" class="icon"><i class="fas fa-list"></i><span>Files</span></a>
+            <a href="/recycle" class="icon"><i class="fas fa-trash-restore"></i><span>Recycle</span></a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

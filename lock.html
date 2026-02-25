@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lock Files</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <header class="navbar">
+        <div class="logo"><i class="fas fa-lock"></i> Cosmic File Locker</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/list"><i class="fas fa-list"></i> Files</a></li>
+                <li><a href="/recycle"><i class="fas fa-trash-restore"></i> Recycle</a></li>
+                <li><a href="/logout" class="logout-btn"><i class="fas fa-power-off"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section">
+        <h2><i class="fas fa-lock"></i> Lock Your Files</h2>
+        <form id="lock-form" class="cosmic-form" enctype="multipart/form-data">
+            <div class="input-group password-container">
+                <input type="password" id="lock-password" placeholder="Password" required>
+            </div>
+            <div class="input-group">
+                <input type="file" id="lock-file" required>
+            </div>
+            <button type="submit">Lock File</button>
+        </form>
+        <div id="lock-output" class="output"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

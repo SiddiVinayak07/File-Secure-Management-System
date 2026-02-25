@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Files</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <header class="navbar">
+        <div class="logo"><i class="fas fa-lock"></i> Cosmic File Locker</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/lock"><i class="fas fa-lock"></i> Lock</a></li>
+                <li><a href="/recycle"><i class="fas fa-trash-restore"></i> Recycle</a></li>
+                <li><a href="/logout" class="logout-btn"><i class="fas fa-power-off"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section">
+        <h2><i class="fas fa-list"></i> Your Files</h2>
+        <form id="list-form" class="cosmic-form">
+            <input type="password" id="list-password" placeholder="Password" required>
+            <button type="submit">List Files</button>
+        </form>
+        <div id="list-output" class="output">
+            <ul id="file-list"></ul>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

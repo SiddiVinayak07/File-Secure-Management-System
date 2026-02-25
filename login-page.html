@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Cosmic File Locker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <header class="navbar">
+        <div class="logo"><i class="fas fa-lock"></i> Cosmic File Locker</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/signup" class="auth-link"><i class="fas fa-user-plus"></i> Signup</a></li>
+                <li><a href="/logout" class="logout-btn"><i class="fas fa-power-off"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section login-section">
+        <h2><i class="fas fa-sign-in-alt"></i> Login</h2>
+        <form id="login-form" class="cosmic-form">
+            <div class="input-group">
+                <input type="text" id="login-user-id" placeholder="User ID" required>
+            </div>
+            <div class="input-group password-container">
+                <input type="password" id="login-password" placeholder="Password" required>
+            </div>
+            <button type="button" id="login-btn" class="login-btn">Login</button>
+            <div class="forgot-password-link">
+                <a href="/forgot-password" id="forgot-password-link">Forgot Password?</a>
+            </div>
+        </form>
+        <div id="login-output" class="output"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

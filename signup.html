@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Cosmic File Locker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <header class="navbar">
+        <div class="logo"><i class="fas fa-lock"></i> Cosmic File Locker</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/login-page" class="auth-link"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                <li><a href="/logout" class="logout-btn"><i class="fas fa-power-off"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section signup-section">
+        <h2><i class="fas fa-user-plus"></i> Create Your Account</h2>
+        <form id="signup-form" class="cosmic-form">
+            <div class="input-group">
+                <input type="text" id="signup-user-id" placeholder="User ID" required>
+            </div>
+            <div class="input-group password-container">
+                <input type="password" id="signup-password" placeholder="Password" required>
+            </div>
+            <div id="signup-password-strength" class="strength-meter"></div>
+            <div class="input-group">
+                <input type="text" id="security-question" placeholder="Security Question (e.g., What is your pet's name?)" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="security-answer" placeholder="Security Answer" required>
+            </div>
+            <button type="button" id="submit-signup-btn" class="signup-btn">Signup</button>
+        </form>
+        <div id="signup-output" class="output"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
